@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 from  .models import posts,Comment
 # Register your models here.
 class postsAdmin(admin.ModelAdmin):
-    list_display = ('post_name','post_marked')
+    list_display = ('post_name','post_publish','post_marked')
 admin.site.register(posts,postsAdmin)
 class CommentAdmin(admin.ModelAdmin):
 
