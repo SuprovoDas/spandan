@@ -41,7 +41,7 @@ body
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #a5a5a5;
+	color: #000000;
 }
 div
 {
@@ -1118,21 +1118,21 @@ section
 {
 	display: block;
 	position: relative;
-	padding-top: 136px;
+	padding-top: 75px;
 }
 .newsletter_title
 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 36px;
+	font-size: 48px;
 	font-weight: 400;
-	color: #FFFFFF;
+	color: #f3008e;
 	line-height: 1.2;
 }
 .newsletter_subtitle
 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
-	color: #FFFFFF;
+	font-size: 24px;
+	color: #fffb06f8;
 	font-weight: 300;
 	margin-top: 18px;
 }
@@ -1234,7 +1234,7 @@ section
 }
 .footer_contact_row
 {
-	margin-top: 80px;
+	margin-top: 10px;
 	padding-bottom: 50px;
 }
 .footer_contact_item
@@ -1244,12 +1244,14 @@ section
 }
 .footer_contact_icon
 {
-	width: 68px;
-	height: 68px;
+
+	float: left;
 }
 .footer_contact_icon img
 {
 	max-width: 100%;
+	width: 200px;
+	height: 100px;
 }
 .cr
 {
@@ -1265,8 +1267,8 @@ section
 .footer_contact_title
 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 24px;
-	color: #FFFFFF;
+	font-size: 30px;
+	color:#ff3e3e;
 	font-weight: 400;
 	text-transform: uppercase;
 	margin-top: 18px;
@@ -1277,11 +1279,23 @@ section
 }
 .footer_contact_list ul li
 {
-	font-size: 14px;
+	font-size: 15px;
 	color: #FFFFFF;
 	line-height: 1.71;
 }
 .footer_contact_list ul li:not(:last-child)
 {
 	margin-bottom: 7px;
+}
+.footer_logo
+{
+	float: left;
+	padding: 2px;
+}
+
+.footer_logo img
+{
+	width: 40px;
+	height: 40px;
+	
 }

@@ -921,21 +921,21 @@ section
 {
 	display: block;
 	position: relative;
-	padding-top: 136px;
+	padding-top: 75px;
 }
 .newsletter_title
 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 36px;
+	font-size: 48px;
 	font-weight: 400;
-	color: #FFFFFF;
+	color: #f3008e;
 	line-height: 1.2;
 }
 .newsletter_subtitle
 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
-	color: #FFFFFF;
+	font-size: 24px;
+	color: #fffb06f8;
 	font-weight: 300;
 	margin-top: 18px;
 }
@@ -1004,7 +1004,7 @@ section
 {
 	width: calc((100% - 15px) * 0.65);
 }
-.newsletter_form .input_border
+.newsletter_form > div > div > div
 {
 	position: absolute;
 	left: 0;
@@ -1037,23 +1037,24 @@ section
 }
 .footer_contact_row
 {
-	margin-top: 80px;
+	margin-top: 10px;
 	padding-bottom: 50px;
 }
 .footer_contact_item
 {
 	width: 100%;
+
 }
 .footer_contact_icon
 {
-	width: 40px;
-	height: 68px;
+
 	float: left;
-	padding: 2px;
 }
 .footer_contact_icon img
 {
 	max-width: 100%;
+	width: 200px;
+	height: 100px;
 }
 .cr
 {
@@ -1069,8 +1070,8 @@ section
 .footer_contact_title
 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 24px;
-	color: #FFFFFF;
+	font-size: 30px;
+	color:#ff3e3e;
 	font-weight: 400;
 	text-transform: uppercase;
 	margin-top: 18px;
@@ -1081,7 +1082,7 @@ section
 }
 .footer_contact_list ul li
 {
-	font-size: 14px;
+	font-size: 15px;
 	color: #FFFFFF;
 	line-height: 1.71;
 }
@@ -1089,9 +1090,15 @@ section
 {
 	margin-bottom: 7px;
 }
-.sand{
-	padding: 20px 75px 20px 50px;
-	color : salmon ;
-	font-size : 20px;
+.footer_logo
+{
+	float: left;
+	padding: 2px;
+}
 
+.footer_logo img
+{
+	width: 40px;
+	height: 40px;
+	
 }
