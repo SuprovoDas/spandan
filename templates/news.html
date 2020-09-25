@@ -36,7 +36,7 @@
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-							<div class="logo"><a href="index.html">Travello</a></div>
+							<div class="logo"><img src="{% static 'images/amazon_logo2.png' %}"> </div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li><a href="http://127.0.0.1:8000/">Home</a></li>
@@ -158,10 +158,9 @@
 							<div class="sidebar_title">Categories</div>
 							<div class="sidebar_list">
 								<ul>
-									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Travels<span class="ml-auto">(09)</span></div></a></li>
-									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Organization<span class="ml-auto">(12)</span></div></a></li>
-									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Tips & Tricks<span class="ml-auto">(16)</span></div></a></li>
-									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Uncategorized<span class="ml-auto">(22)</span></div></a></li>
+									{% for post_catagory in result %}
+									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">{{post_catagory.post_catagory}}<span class="ml-auto">({{post_catagory.number}})</span></div></a></li>
+									{% endfor %}
 								</ul>
 							</div>
 						</div>
@@ -183,7 +182,7 @@
 										
 										</div>
 										<div class="latest_post_title"><a href="#">{{post.post_name}}</a></div>
-										<div class="latest_post_text"><p>{{post.post_desc | safe }}</p></div>
+										<div class="latest_post_text"><p>{{ post.post_desc | safe}}</p></div>
 									</div>
 								</div>
 								{% endif %}
@@ -214,6 +213,7 @@
 			</div>
 		</div>
 	</div>
+
 <!-- Footer -->
 	<footer class="footer">
 

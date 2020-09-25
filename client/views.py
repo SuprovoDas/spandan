@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from .models import posts, feedback
-from .models import Comment
+from .models import Comment,Catagory
 from django.http import HttpResponse
 from .forms import CommentForm
 from django.contrib import messages
+from django.db.models import Count
 
 # Create your views here.
 def login(request):
@@ -59,7 +60,9 @@ def logout(request):
 
 def news(request):
     ac = posts.objects.all()
-    return render(request,'news.html',{'pots': ac})
+    catagories = Catagory.objects.all()
+    result = posts.objects.annotate(number=Count('post_catagory'))
+    return render(request,'news.html',{'pots': ac,'catagory': catagories,'result':result})
 
 def contract(request):
     if request.method== 'POST':

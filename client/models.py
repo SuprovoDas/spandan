@@ -3,6 +3,12 @@ from ckeditor.fields import RichTextField
 from datetime import datetime , date
 from django.contrib.auth.models import User, auth
 
+class Catagory(models.Model):
+    name = models.CharField(max_length= 20)
+    number = models.IntegerField(blank=True,null=True)
+    def __str__(self):
+        return self.name
+
 # Create your models here.
 class posts(models.Model):
 
@@ -12,7 +18,7 @@ class posts(models.Model):
     post_desc = RichTextField(blank='True', null='True')
 
     post_marked = models.BooleanField( default=True )
-    post_catagory = models.CharField(max_length= 15)
+    post_catagory = models.ForeignKey(Catagory,on_delete= models.PROTECT , blank=True ,null=True, to_field='id')
     post_publish = models.DateField(default = date.today)
     
     class Meta:
@@ -41,3 +47,4 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ('post_id','date',)  
+

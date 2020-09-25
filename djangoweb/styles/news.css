@@ -302,17 +302,17 @@ section
 	left: 0;
 	width: 100%;
 	z-index: 100;
-	background-color: rgba(41, 41, 38, 0.938);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
+	background-color: #ec6868e8;
 }
 .header_content
 {
 	width: 100%;
-	height: 90px;
+	height: 75px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -321,7 +321,7 @@ section
 }
 .header.scrolled
 {
-	background: rgba(24,24,24,0.6);
+	background: rgba(255, 86, 86, 0.624);
 }
 .header.scrolled .header_content
 {
@@ -334,14 +334,23 @@ section
 .logo a
 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 48px;
+	font-size: 60px;
 	font-weight: 500;
-	color: #62f085c5;
-	line-height: 1;
+	color: gold;
+	line-height: 0.75;
+}
+.logo img
+{
+	height: 65px;
+	width: 110px;
+	
 }
 .main_nav
 {
-	margin-left: 100px;
+	margin-left: 150px;
+	line-height: 3;
+	font-size: medium;
+	color: #1177f5e8;
 }
 .main_nav ul li
 {
@@ -352,23 +361,7 @@ section
 	display: block;
 	position: absolute;
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
-	top: -100px;
-	width: 2px;
-	height: 0px;
-	background: #fdf900;
-	content: '';
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+	
 }
 .main_nav ul li.active::after,
 .main_nav ul li:hover::after
@@ -384,9 +377,9 @@ section
 .main_nav ul li a
 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
-	color: #044ff1;
+	color: #FFFFFF;
 	white-space: nowrap;
 }
 .header_phone
@@ -424,7 +417,7 @@ section
 .header_social ul li a i
 {
 	font-size: 14px;
-	color: rgba(255, 231, 11, 0.938);
+	color: rgba(255,255,255,1);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -602,7 +595,7 @@ section
 .home
 {
 	width: 100%;
-	height: 150px;
+	height: 400px;
 }
 .home_slider_container
 {
@@ -623,7 +616,66 @@ section
 	font-size: 100px;
 	line-height: 1.1;
 	font-weight: 400;
-	color: #ff0000;
+	color: #FFFFFF;
+}
+.home_page_nav
+{
+	position: absolute;
+	right: 119px;
+	top: 44.2%;
+	z-index: 2;
+}
+.home_page_nav ul li
+{
+	position: relative;
+}
+.home_page_nav ul li a
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.home_page_nav ul li:not(:last-child)
+{
+	margin-bottom: 32px;
+}
+.home_page_nav ul li span
+{
+	margin-left: 30px;
+}
+.home_page_nav ul li::after
+{
+	display: block;
+	position: absolute;
+	right: -4px;
+	bottom: -6px;
+	width: 0px;
+	height: 2px;
+	background: rgba(255,255,255,0.63);
+	visibility: hidden;
+	opacity: 0;
+	content: '';
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.home_page_nav ul li:hover::after
+{
+	visibility: visible;
+	opacity: .3;
+	background: rgba(255,255,255,1);
+	width: calc(100% + 28px);
+}
+.home_page_nav ul li:hover a
+{
+	color: rgba(255,255,255,1);
 }
 
 /*********************************

@@ -1,10 +1,14 @@
 from django.contrib import admin
 from django.db import models
 from django.contrib.auth.models import Group
-from  .models import posts,Comment
+from  .models import posts,Comment,Catagory
 # Register your models here.
+
+admin.site.register(Catagory)    
+
 class postsAdmin(admin.ModelAdmin):
     list_display = ('post_name','post_publish','post_marked')
+
 admin.site.register(posts,postsAdmin)
 class CommentAdmin(admin.ModelAdmin):
 
