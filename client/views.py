@@ -82,6 +82,7 @@ def contract(request):
 def Post_page(request,id):
     p = posts.objects.get(pk=id)    
     
+    
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -101,4 +102,4 @@ def Post_page(request,id):
             new_comment.save()    
     
     q =Comment.objects.all().filter(post_id = id,parent = None,active = True)
-    return render(request,'post_page.html',{'selected_post': p, 'comments': q,})
+    return render(request,'post_page.html',{'selected_post': p, 'comments': q})

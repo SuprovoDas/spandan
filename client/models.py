@@ -2,7 +2,8 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from datetime import datetime , date
 from django.contrib.auth.models import User, auth
-
+from django.db.models.signals import pre_save
+from spandan.utils import unique_slug_generator
 class Catagory(models.Model):
     name = models.CharField(max_length= 20)
     number = models.IntegerField(blank=True,null=True)
@@ -16,13 +17,17 @@ class posts(models.Model):
     post_image = models.ImageField(upload_to= 'picture')
     #post_desc = models.TextField()
     post_desc = RichTextField(blank='True', null='True')
-
+    slug = models.SlugField(max_length=250,null=True,blank=True)
     post_marked = models.BooleanField( default=True )
     post_catagory = models.ForeignKey(Catagory,on_delete= models.PROTECT , blank=True ,null=True, to_field='id')
     post_publish = models.DateField(default = date.today)
     
     class Meta:
         ordering = ["post_publish"]
+def slug_generator(sender,instance,*args,**kwargs):
+    if not instance.slug:
+        instance.slug = unique_slug_generator(instance)
+pre_save.connect(slug_generator,sender=posts)
 
 class feedback(models.Model):
     fed_name = models.CharField(max_length= 150)
